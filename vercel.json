@@ -1,0 +1,55 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/aviation",
+      "destination": "/aviation.html"
+    },
+    {
+      "source": "/management",
+      "destination": "/management.html"
+    },
+    {
+      "source": "/education",
+      "destination": "/education.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/aviation.html",
+      "destination": "/aviation",
+      "permanent": true
+    },
+    {
+      "source": "/management.html",
+      "destination": "/management",
+      "permanent": true
+    },
+    {
+      "source": "/education.html",
+      "destination": "/education",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ]
+}
+
