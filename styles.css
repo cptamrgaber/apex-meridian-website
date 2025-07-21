@@ -340,7 +340,8 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--gradient-primary);
+    /* Use an inspiring mountain peak image for the site theme */
+    background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
 }
 
 .hero-overlay {
@@ -430,8 +431,17 @@ p {
 
 .hero-visual {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.hero-gif {
+    max-width: 300px;
+    width: 100%;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-medium);
+    margin-bottom: 2rem;
 }
 
 .hero-stats {
@@ -559,6 +569,13 @@ p {
     border-radius: var(--border-radius-large);
     overflow: hidden;
     box-shadow: var(--shadow-medium);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .image-placeholder {
@@ -1263,6 +1280,9 @@ p {
 }
 
 @media (max-width: 480px) {
+    :root {
+        --section-padding: 3rem 0;
+    }
     .container {
         padding: 0 1rem;
     }
@@ -1310,6 +1330,10 @@ p {
     .testimonial-btn {
         width: 40px;
         height: 40px;
+    }
+
+    .hero-gif {
+        max-width: 200px;
     }
 }
 
